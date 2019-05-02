@@ -22,6 +22,8 @@ public class GreetingClient {
 
         GreetServiceGrpc.GreetServiceBlockingStub syncGreetClient = GreetServiceGrpc.newBlockingStub(channel);
 
+
+        /* Unary
         Greeting greeting = Greeting.newBuilder()
                 .setFirstName("Thoai")
                 .setLastName("Nguyen")
@@ -33,6 +35,21 @@ public class GreetingClient {
         GreetResponse response = syncGreetClient.greet(greetRequest);
 
         System.out.println(response.getResult());
+        */
+
+
+        // Server Streamming
+
+        GreetManyTimesRequest request = GreetManyTimesRequest.newBuilder()
+                .setGreeting(Greeting.newBuilder().setFirstName("Thoai").setLastName("Nguyen"))
+                .build();
+
+        // we stream the response (in blocking maner)
+        syncGreetClient.greetManyTimes(request)
+                .forEachRemaining( response -> {
+                    System.out.println(response.getResult());
+                });
+
         // do something
         System.out.println("Shutdown channel");
         channel.shutdown();

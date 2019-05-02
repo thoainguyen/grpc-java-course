@@ -26,4 +26,24 @@ public class GreetServiceImpl extends GreetServiceGrpc.GreetServiceImplBase {
         responseObserver.onCompleted();
 
     }
+
+    @Override
+    public void greetManyTimes(GreetManyTimesRequest request, StreamObserver<GreetManyTimesResponse> responseObserver){
+        String firstname = request.getGreeting().getFirstName();
+
+        try {
+            for(int i = 0; i < 10; i ++){
+                String result = "Hello " + firstname + ", response number : " + i;
+                GreetManyTimesResponse response = GreetManyTimesResponse.newBuilder()
+                        .setResult(result)
+                        .build();
+                responseObserver.onNext(response);
+                Thread.sleep(1000L);
+            }
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }finally {
+            responseObserver.onCompleted();
+        }
+    }
 }

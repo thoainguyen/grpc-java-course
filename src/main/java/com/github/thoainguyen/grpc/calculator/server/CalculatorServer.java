@@ -14,7 +14,7 @@ public class CalculatorServer {
         server.start();
 
         Runtime.getRuntime().addShutdownHook( new Thread ( () -> {
-            System.out.println("Received Shutdonw Server");
+            System.out.println("Received Shutdown Server");
             server.shutdown();
             System.out.println("Succesfully Shutdown Server");
         }));
