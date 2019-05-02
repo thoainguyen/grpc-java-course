@@ -1,5 +1,6 @@
 syntax = "proto3";
 
+
 package dummy;
 
 option java_package = "com.proto.dummy";

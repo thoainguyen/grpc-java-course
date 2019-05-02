@@ -2,6 +2,7 @@ package com.github.thoainguyen.grpc.greeting.client;
 
 
 import com.proto.dummy.DummyServiceGrpc;
+import com.proto.greet.*;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
@@ -14,11 +15,24 @@ public class GreetingClient {
                 .build();
 
         System.out.println("Creating Stub");
-        DummyServiceGrpc.DummyServiceBlockingStub syncClient = DummyServiceGrpc.newBlockingStub(channel);
 
-        //
+        // old and Dummy
+        // DummyServiceGrpc.DummyServiceBlockingStub syncClient = DummyServiceGrpc.newBlockingStub(channel);
         // DummyServiceGrpc.DummyServiceFutureStub asyncClient = DummyServiceGrpc.newFutureStub(channel);
 
+        GreetServiceGrpc.GreetServiceBlockingStub syncGreetClient = GreetServiceGrpc.newBlockingStub(channel);
+
+        Greeting greeting = Greeting.newBuilder()
+                .setFirstName("Thoai")
+                .setLastName("Nguyen")
+                .build();
+        GreetRequest greetRequest = GreetRequest.newBuilder()
+                .setGreeting(greeting)
+                .build();
+
+        GreetResponse response = syncGreetClient.greet(greetRequest);
+
+        System.out.println(response.getResult());
         // do something
         System.out.println("Shutdown channel");
         channel.shutdown();
