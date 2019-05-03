@@ -39,9 +39,10 @@ Learn gRPC by follow [here](https://learning.oreilly.com/videos/grpc-java-master
   * on developement: use .usePlaintext() for simple and fast
 * gRPC Language Interoperability : you can create client and server with isn't same languague
 * gRPC Reflection and Evans CLI : useful tools support gRPC client command line is [evans](https://github.com/ktr0731/evans) 
+    * Follow https://github.com/grpc/grpc-java/blob/master/documentation/server-reflection-tutorial.md
     * Install evans for gRPC client https://github.com/ktr0731/evans
     * On linux download file evans-package.tar.gz
-    
+  
     ```$xslt
     
     $ tar xvzf evans-package.tar.gz // untar

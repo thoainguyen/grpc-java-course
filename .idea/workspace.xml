@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6724f62-02e9-44a7-9b6e-8507f981a580" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/client/BlogClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/proto/blog/blog.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -53,10 +58,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/server/CalculatorServer.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="408">
+              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -64,12 +69,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="823">
-                <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+              <first_editor relative-caret-position="1248">
+                <caret line="52" selection-start-line="52" selection-end-line="52" />
               </first_editor>
               <second_editor />
             </state>
@@ -77,29 +82,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/client/GreetingClient.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="134" selection-start-line="134" selection-end-line="134" />
+            <state relative-caret-position="744">
+              <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#doUnaryCallWithDeadline#0;class#GreetingClient#0" />
-                <element signature="method#doBiDiStreamingCall#0;class#GreetingClient#0" />
-                <element signature="e#3514#3515#0" expanded="true" />
-                <element signature="e#3579#3580#0" expanded="true" />
-                <element signature="method#doClientStreamingCall#0;class#GreetingClient#0" />
-                <element signature="method#doServerStreamingCall#0;class#GreetingClient#0" />
-                <element signature="method#doUnaryCall#0;class#GreetingClient#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/server/GreetingServer.java">
+        <entry file="file://$PROJECT_DIR$/src/main/proto/blog/blog.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            <state relative-caret-position="360">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/client/BlogClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,11 +138,21 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/client/GreetingClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/server/GreetingServer.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/server/CalculatorServer.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/proto/blog/blog.proto" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/client/BlogClient.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="73" />
@@ -152,7 +169,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,7 +209,46 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="grpc" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grpc-java-course" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grpc-java-course" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="grpc" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grpc-java-course" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grpc-java-course" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="grpc" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grpc-java-course" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grpc-java-course" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="grpc" type="462c0819:PsiDirectoryNode" />
               <item name="calculator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grpc-java-course" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grpc-java-course" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="grpc" type="462c0819:PsiDirectoryNode" />
+              <item name="calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="grpc-java-course" type="b2602c69:ProjectViewProjectNode" />
@@ -205,16 +260,40 @@
               <item name="calculator" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="grpc-java-course" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grpc-java-course" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="proto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grpc-java-course" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grpc-java-course" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="proto" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grpc-java-course" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grpc-java-course" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="proto" type="462c0819:PsiDirectoryNode" />
+              <item name="calculator" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556872163117" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556878128538" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -225,6 +304,9 @@
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.github.thoainguyen.grpc.blog.server" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -239,13 +321,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CalculatorServer">
-    <configuration name="CalculatorClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.thoainguyen.grpc.calculator.client.CalculatorClient" />
+  <component name="RunManager" selected="Application.BlogClient">
+    <configuration name="BlogClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.thoainguyen.grpc.blog.client.BlogClient" />
       <module name="com.github.thoainguyen.grpc.grpc-java-course.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.github.thoainguyen.grpc.calculator.client.*" />
+          <option name="PATTERN" value="com.github.thoainguyen.grpc.blog.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlogServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.thoainguyen.grpc.blog.server.BlogServer" />
+      <module name="com.github.thoainguyen.grpc.grpc-java-course.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.thoainguyen.grpc.blog.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -266,31 +361,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GreetingClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.thoainguyen.grpc.greeting.client.GreetingClient" />
-      <module name="com.github.thoainguyen.grpc.grpc-java-course.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.thoainguyen.grpc.greeting.client.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GreetingServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.thoainguyen.grpc.greeting.server.GreetingServer" />
-      <module name="com.github.thoainguyen.grpc.grpc-java-course.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.thoainguyen.grpc.greeting.server.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="grpc-java-course [extractProto]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="extractProto" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="grpc-java-course [generateProto]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -313,11 +401,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CalculatorServer" />
-        <item itemvalue="Application.GreetingClient" />
-        <item itemvalue="Application.GreetingServer" />
-        <item itemvalue="Application.CalculatorClient" />
+        <item itemvalue="Application.BlogClient" />
+        <item itemvalue="Application.BlogServer" />
         <item itemvalue="Gradle.grpc-java-course [generateProto]" />
+        <item itemvalue="Gradle.grpc-java-course [extractProto]" />
+        <item itemvalue="Application.CalculatorServer" />
       </list>
     </recent_temporary>
   </component>
@@ -332,18 +420,21 @@
       <option name="presentableId" value="Default" />
       <updated>1556802944740</updated>
       <workItem from="1556802948965" duration="11302000" />
-      <workItem from="1556846633331" duration="21654000" />
+      <workItem from="1556846633331" duration="23835000" />
+      <workItem from="1556874393021" duration="367000" />
+      <workItem from="1556874767079" duration="800000" />
+      <workItem from="1556875573314" duration="2547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32956000" />
+    <option name="totallyTimeSpent" value="38851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="73" y="1105" width="1847" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25263742" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2581899" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -352,7 +443,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49972236" weight="0.2861771" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49972236" visible="true" weight="0.2861771" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -367,7 +458,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24986118" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32981676" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Gradle" order="6" visible="true" weight="0.15991116" />
@@ -376,37 +467,37 @@
       <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
     <layout-to-restore>
-      <window_info id="Designer" order="0" />
-      <window_info id="Image Layers" order="1" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.24986118" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Build" order="0" weight="0.3297414" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32937366" />
-      <window_info anchor="bottom" id="Docker" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.32937366" />
-      <window_info anchor="bottom" id="Database Changes" order="5" />
-      <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Message" order="7" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.32937366" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.32937366" />
-      <window_info anchor="bottom" id="Debug" order="10" weight="0.39956802" />
-      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="13" />
-      <window_info anchor="right" id="Maven" order="0" />
-      <window_info anchor="right" id="Palette" order="1" />
-      <window_info anchor="right" id="Capture Analysis" order="2" />
-      <window_info anchor="right" id="Gradle" order="3" visible="true" weight="0.11049417" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.24986118" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25541365" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49972236" visible="true" weight="0.2861771" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32937366" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49972236" weight="0.32937366" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50027764" side_tool="true" weight="0.32937366" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32937366" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24986118" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32981676" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Gradle" order="6" visible="true" weight="0.15991116" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,43 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/proto/calculator/calculator.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/client/CalculatorClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#doClientStreamingCall#0;class#CalculatorClient#0" />
-            <element signature="method#doClientStreamingCall#0;class#CalculatorClient#0" />
-            <element signature="method#doServerStreamingCall#0;class#CalculatorClient#0" />
-            <element signature="method#doUnaryCall#0;class#CalculatorClient#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/server/CalculatorServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="128" column="39" selection-start-line="128" selection-start-column="39" selection-end-line="128" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#sum#0;class#CalculatorServiceImpl#0" />
-            <element signature="method#primeNumberDecomposition#0;class#CalculatorServiceImpl#0" />
-            <element signature="method#computeAverage#0;class#CalculatorServiceImpl#0" />
-            <element signature="method#findMaximum#0;class#CalculatorServiceImpl#0" />
-            <element signature="e#3281#3282#0" expanded="true" />
-            <element signature="e#3326#3327#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -566,16 +620,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/client/CalculatorClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#doClientStreamingCall#0;class#CalculatorClient#0" />
+            <element signature="method#doServerStreamingCall#0;class#CalculatorClient#0" />
+            <element signature="method#doUnaryCall#0;class#CalculatorClient#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/server/CalculatorServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#sum#0;class#CalculatorServiceImpl#0" />
+            <element signature="method#primeNumberDecomposition#0;class#CalculatorServiceImpl#0" />
+            <element signature="method#computeAverage#0;class#CalculatorServiceImpl#0" />
+            <element signature="method#findMaximum#0;class#CalculatorServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto/calculator/calculator.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/client/GreetingClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="134" selection-start-line="134" selection-end-line="134" />
+        <state relative-caret-position="487">
+          <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#doUnaryCallWithDeadline#0;class#GreetingClient#0" />
             <element signature="method#doBiDiStreamingCall#0;class#GreetingClient#0" />
-            <element signature="e#3514#3515#0" expanded="true" />
-            <element signature="e#3579#3580#0" expanded="true" />
             <element signature="method#doClientStreamingCall#0;class#GreetingClient#0" />
             <element signature="method#doServerStreamingCall#0;class#GreetingClient#0" />
             <element signature="method#doUnaryCall#0;class#GreetingClient#0" />
@@ -583,16 +676,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/server/GreetingServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
+        <state relative-caret-position="558">
           <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -602,8 +688,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/server/CalculatorServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="264">
+          <caret line="11" column="83" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -613,10 +699,58 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="823">
-            <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+          <first_editor relative-caret-position="1248">
+            <caret line="52" selection-start-line="52" selection-end-line="52" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto/blog/blog.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/generated/source/proto/main/java/com/proto/blog/BlogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+          <folding>
+            <element signature="e#1998#1999#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/client/BlogClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
