@@ -59,8 +59,10 @@ public class GreetingClient {
             GreetWithDeadlineResponse response = blockingStub.withDeadline(Deadline.after(100, TimeUnit.MILLISECONDS))
                     .greetWithDeadline(GreetWithDeadlineRequest.newBuilder()
                             .setGreeting(Greeting.newBuilder()
-                                    .setFirstName("Thoai").getDefaultInstanceForType())
+                                    .setFirstName("Thoai").build())
                             .build());
+            System.out.println("Result : " + response.getResult());
+
         } catch (StatusRuntimeException e){
             if(e.getStatus() == Status.DEADLINE_EXCEEDED){
                 System.out.println("Deadline has been exceed, we don't want the response");
