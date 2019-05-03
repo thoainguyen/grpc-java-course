@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6724f62-02e9-44a7-9b6e-8507f981a580" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/client/BlogClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/proto/blog/blog.proto" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/client/BlogClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/client/BlogClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServerImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/proto/blog/blog.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/blog/blog.proto" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -60,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+            <state relative-caret-position="96">
+              <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+            <state relative-caret-position="976">
+              <caret line="59" column="41" lean-forward="true" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/proto/blog/blog.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+            <state relative-caret-position="103">
+              <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -105,8 +102,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/client/BlogClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+            <state relative-caret-position="264">
+              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -141,8 +138,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/server/CalculatorServer.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/proto/blog/blog.proto" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServer.java" />
+        <option value="$PROJECT_DIR$/src/main/proto/blog/blog.proto" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/client/BlogClient.java" />
       </list>
@@ -275,14 +272,6 @@
               <item name="proto" type="462c0819:PsiDirectoryNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="grpc-java-course" type="b2602c69:ProjectViewProjectNode" />
-              <item name="grpc-java-course" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="proto" type="462c0819:PsiDirectoryNode" />
-              <item name="calculator" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -293,7 +282,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556878128538" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556879828191" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -423,12 +412,12 @@
       <workItem from="1556846633331" duration="23835000" />
       <workItem from="1556874393021" duration="367000" />
       <workItem from="1556874767079" duration="800000" />
-      <workItem from="1556875573314" duration="2547000" />
+      <workItem from="1556875573314" duration="4249000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38851000" />
+    <option name="totallyTimeSpent" value="40553000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="73" y="1105" width="1847" height="1055" extended-state="6" />
@@ -706,13 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/proto/blog/blog.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/generated/source/proto/main/java/com/proto/blog/BlogService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -724,10 +706,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto/blog/blog.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        <state relative-caret-position="976">
+          <caret line="59" column="41" lean-forward="true" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -736,8 +725,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/server/BlogServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        <state relative-caret-position="96">
+          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -746,8 +735,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/blog/client/BlogClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="33" column="41" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+        <state relative-caret-position="264">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
