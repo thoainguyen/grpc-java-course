@@ -2,8 +2,7 @@ package com.github.thoainguyen.grpc.greeting.client;
 
 
 import com.proto.greet.*;
-import io.grpc.ManagedChannel;
-import io.grpc.ManagedChannelBuilder;
+import io.grpc.*;
 import io.grpc.stub.StreamObserver;
 
 import java.util.Arrays;
@@ -28,10 +27,50 @@ public class GreetingClient {
         // doUnaryCall(channel);
         // doServerStreamingCall(channel);
         // doClientStreamingCall(channel);
-
-        doBiDiStreamingCall(channel);
+        // doBiDiStreamingCall(channel);
+        doUnaryCallWithDeadline(channel);
         System.out.println("Shutdown channel");
         channel.shutdown();
+    }
+
+    private void doUnaryCallWithDeadline(ManagedChannel channel) {
+        GreetServiceGrpc.GreetServiceBlockingStub blockingStub = GreetServiceGrpc.newBlockingStub(channel);
+        // first call (3000ms) deadline
+        try{
+            System.out.println("Sending a request with a deadline of 3000ms");
+            GreetWithDeadlineResponse response = blockingStub.withDeadline(Deadline.after(3000, TimeUnit.MILLISECONDS))
+            .greetWithDeadline(GreetWithDeadlineRequest.newBuilder()
+                    .setGreeting(Greeting.newBuilder()
+                            .setFirstName("Thoai").build())
+                    .build());
+            System.out.println("Result : " + response.getResult());
+        } catch (StatusRuntimeException e){
+            if(e.getStatus() == Status.DEADLINE_EXCEEDED){
+                System.out.println("Deadline has been exceed, we don't want the response");
+            }
+            else {
+                e.printStackTrace();
+            }
+        }
+
+        // second call (100ms) deadline
+        try{
+            System.out.println("Sending a request with a deadline of 100ms");
+            GreetWithDeadlineResponse response = blockingStub.withDeadline(Deadline.after(100, TimeUnit.MILLISECONDS))
+                    .greetWithDeadline(GreetWithDeadlineRequest.newBuilder()
+                            .setGreeting(Greeting.newBuilder()
+                                    .setFirstName("Thoai").getDefaultInstanceForType())
+                            .build());
+        } catch (StatusRuntimeException e){
+            if(e.getStatus() == Status.DEADLINE_EXCEEDED){
+                System.out.println("Deadline has been exceed, we don't want the response");
+            }
+            else {
+                e.printStackTrace();
+            }
+        }
+
+
     }
 
     private void doBiDiStreamingCall(ManagedChannel channel) {
@@ -145,6 +184,22 @@ public class GreetingClient {
 
     }
 
+    private void doServerStreamingCall(ManagedChannel channel) {
+        // Server Streamming
+        GreetServiceGrpc.GreetServiceBlockingStub greetClient = GreetServiceGrpc.newBlockingStub(channel);
+
+
+        GreetManyTimesRequest request = GreetManyTimesRequest.newBuilder()
+                .setGreeting(Greeting.newBuilder().setFirstName("Thoai").setLastName("Nguyen"))
+                .build();
+
+        // we stream the response (in blocking maner)
+        greetClient.greetManyTimes(request)
+                .forEachRemaining( response -> {
+                    System.out.println(response.getResult());
+                });
+    }
+
     private void doUnaryCall(ManagedChannel channel) {
         // created a greet service client (blocking -synchronous)
         GreetServiceGrpc.GreetServiceBlockingStub greetClient = GreetServiceGrpc.newBlockingStub(channel);
@@ -164,20 +219,5 @@ public class GreetingClient {
         System.out.println(response.getResult());
     }
 
-    private void doServerStreamingCall(ManagedChannel channel) {
-        // Server Streamming
-        GreetServiceGrpc.GreetServiceBlockingStub greetClient = GreetServiceGrpc.newBlockingStub(channel);
-
-
-        GreetManyTimesRequest request = GreetManyTimesRequest.newBuilder()
-                .setGreeting(Greeting.newBuilder().setFirstName("Thoai").setLastName("Nguyen"))
-                .build();
-
-        // we stream the response (in blocking maner)
-        greetClient.greetManyTimes(request)
-                .forEachRemaining( response -> {
-                    System.out.println(response.getResult());
-                });
-    }
 
 }

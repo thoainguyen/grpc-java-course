@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6724f62-02e9-44a7-9b6e-8507f981a580" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/client/CalculatorClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/client/CalculatorClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/server/CalculatorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/server/CalculatorServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/client/GreetingClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/client/GreetingClient.java" afterDir="false" />
@@ -72,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/proto/calculator/calculator.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="425">
+              <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -81,10 +80,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/client/CalculatorClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-376">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="832">
+              <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#doClientStreamingCall#0;class#CalculatorClient#0" />
                 <element signature="method#doClientStreamingCall#0;class#CalculatorClient#0" />
                 <element signature="method#doServerStreamingCall#0;class#CalculatorClient#0" />
                 <element signature="method#doUnaryCall#0;class#CalculatorClient#0" />
@@ -93,16 +93,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/server/CalculatorServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="111" column="47" selection-start-line="111" selection-start-column="47" selection-end-line="111" selection-end-column="47" />
+            <state relative-caret-position="358">
+              <caret line="128" column="39" selection-start-line="128" selection-start-column="39" selection-end-line="128" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#sum#0;class#CalculatorServiceImpl#0" />
                 <element signature="method#primeNumberDecomposition#0;class#CalculatorServiceImpl#0" />
                 <element signature="method#computeAverage#0;class#CalculatorServiceImpl#0" />
+                <element signature="method#findMaximum#0;class#CalculatorServiceImpl#0" />
                 <element signature="e#3281#3282#0" expanded="true" />
                 <element signature="e#3326#3327#0" expanded="true" />
               </folding>
@@ -111,26 +112,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/proto/greet/greet.proto">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/server/GreetServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="10" />
+            <state relative-caret-position="352">
+              <caret line="123" column="69" selection-start-line="123" selection-start-column="58" selection-end-line="123" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#greet#0;class#GreetServiceImpl#0" />
+                <element signature="method#greetManyTimes#0;class#GreetServiceImpl#0" />
+                <element signature="method#longGreet#0;class#GreetServiceImpl#0" />
+                <element signature="method#greetEveryOne#0;class#GreetServiceImpl#0" />
+                <element signature="e#3499#3500#0" expanded="true" />
+                <element signature="e#3561#3562#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/proto/greet/greet.proto">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="61" column="23" lean-forward="true" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/client/GreetingClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1632">
-              <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+            <state relative-caret-position="456">
+              <caret line="43" column="58" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#doBiDiStreamingCall#0;class#GreetingClient#0" />
                 <element signature="e#1598#1599#0" expanded="true" />
                 <element signature="e#1663#1664#0" expanded="true" />
                 <element signature="method#doClientStreamingCall#0;class#GreetingClient#0" />
-                <element signature="method#doUnaryCall#0;class#GreetingClient#0" />
                 <element signature="method#doServerStreamingCall#0;class#GreetingClient#0" />
+                <element signature="method#doUnaryCall#0;class#GreetingClient#0" />
               </folding>
             </state>
           </provider>
@@ -139,8 +159,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/server/GreetingServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            <state>
+              <caret column="30" selection-start-column="30" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -167,12 +187,12 @@
         <option value="$PROJECT_DIR$/src/main/proto/dummy/dummy.proto" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/server/GreetingServer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/server/CalculatorServer.java" />
+        <option value="$PROJECT_DIR$/src/main/proto/calculator/calculator.proto" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/server/CalculatorServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/client/CalculatorClient.java" />
         <option value="$PROJECT_DIR$/src/main/proto/greet/greet.proto" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/server/GreetServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/client/GreetingClient.java" />
-        <option value="$PROJECT_DIR$/src/main/proto/calculator/calculator.proto" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/client/CalculatorClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/server/CalculatorServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -267,7 +287,7 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="grpc" type="462c0819:PsiDirectoryNode" />
-              <item name="calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="greeting" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="grpc-java-course" type="b2602c69:ProjectViewProjectNode" />
@@ -276,7 +296,7 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="grpc" type="462c0819:PsiDirectoryNode" />
-              <item name="calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="greeting" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -286,7 +306,7 @@
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="grpc" type="462c0819:PsiDirectoryNode" />
-              <item name="calculator" type="462c0819:PsiDirectoryNode" />
+              <item name="greeting" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -294,25 +314,6 @@
               <item name="grpc-java-course" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="grpc" type="462c0819:PsiDirectoryNode" />
-              <item name="greeting" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="grpc-java-course" type="b2602c69:ProjectViewProjectNode" />
-              <item name="grpc-java-course" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="grpc" type="462c0819:PsiDirectoryNode" />
-              <item name="greeting" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="grpc-java-course" type="b2602c69:ProjectViewProjectNode" />
-              <item name="grpc-java-course" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="proto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -329,7 +330,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="proto" type="462c0819:PsiDirectoryNode" />
-              <item name="dummy" type="462c0819:PsiDirectoryNode" />
+              <item name="greet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="grpc-java-course" type="b2602c69:ProjectViewProjectNode" />
@@ -346,7 +347,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556855600283" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556863735871" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -371,7 +372,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CalculatorClient">
+  <component name="RunManager" selected="Application.GreetingClient">
     <configuration name="CalculatorClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.thoainguyen.grpc.calculator.client.CalculatorClient" />
       <module name="com.github.thoainguyen.grpc.grpc-java-course.main" />
@@ -445,10 +446,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CalculatorClient" />
-        <item itemvalue="Application.CalculatorServer" />
         <item itemvalue="Application.GreetingClient" />
         <item itemvalue="Application.GreetingServer" />
+        <item itemvalue="Application.CalculatorClient" />
+        <item itemvalue="Application.CalculatorServer" />
         <item itemvalue="Gradle.grpc-java-course [generateProto]" />
       </list>
     </recent_temporary>
@@ -464,12 +465,12 @@
       <option name="presentableId" value="Default" />
       <updated>1556802944740</updated>
       <workItem from="1556802948965" duration="11302000" />
-      <workItem from="1556846633331" duration="8931000" />
+      <workItem from="1556846633331" duration="14510000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20233000" />
+    <option name="totallyTimeSpent" value="25812000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="73" y="1105" width="1847" height="1055" extended-state="6" />
@@ -484,7 +485,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32937366" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21706264" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2861771" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39956802" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -543,6 +544,20 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/client/GreetingClient.java</url>
+          <line>202</line>
+          <properties class="com.github.thoainguyen.grpc.greeting.client.GreetingClient" method="doUnaryCall">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -603,66 +618,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/server/GreetingServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/server/GreetServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="102" column="30" selection-start-line="102" selection-start-column="30" selection-end-line="102" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#greet#0;class#GreetServiceImpl#0" />
-            <element signature="method#greetManyTimes#0;class#GreetServiceImpl#0" />
-            <element signature="method#longGreet#0;class#GreetServiceImpl#0" />
-            <element signature="e#3499#3500#0" expanded="true" />
-            <element signature="e#3561#3562#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/client/GreetingClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
-          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1598#1599#0" expanded="true" />
-            <element signature="e#1663#1664#0" expanded="true" />
-            <element signature="method#doClientStreamingCall#0;class#GreetingClient#0" />
-            <element signature="method#doUnaryCall#0;class#GreetingClient#0" />
-            <element signature="method#doServerStreamingCall#0;class#GreetingClient#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/proto/greet/greet.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/proto/calculator/calculator.proto">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="425">
+          <caret line="59" column="55" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/client/CalculatorClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-376">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="832">
+          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#doClientStreamingCall#0;class#CalculatorClient#0" />
             <element signature="method#doClientStreamingCall#0;class#CalculatorClient#0" />
             <element signature="method#doServerStreamingCall#0;class#CalculatorClient#0" />
             <element signature="method#doUnaryCall#0;class#CalculatorClient#0" />
@@ -672,15 +641,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/calculator/server/CalculatorServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="111" column="47" selection-start-line="111" selection-start-column="47" selection-end-line="111" selection-end-column="47" />
+        <state relative-caret-position="358">
+          <caret line="128" column="39" selection-start-line="128" selection-start-column="39" selection-end-line="128" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#sum#0;class#CalculatorServiceImpl#0" />
             <element signature="method#primeNumberDecomposition#0;class#CalculatorServiceImpl#0" />
             <element signature="method#computeAverage#0;class#CalculatorServiceImpl#0" />
+            <element signature="method#findMaximum#0;class#CalculatorServiceImpl#0" />
             <element signature="e#3281#3282#0" expanded="true" />
             <element signature="e#3326#3327#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto/greet/greet.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="61" column="23" lean-forward="true" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/server/GreetingServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" selection-start-column="30" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/server/GreetServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="123" column="69" selection-start-line="123" selection-start-column="58" selection-end-line="123" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#greet#0;class#GreetServiceImpl#0" />
+            <element signature="method#greetManyTimes#0;class#GreetServiceImpl#0" />
+            <element signature="method#longGreet#0;class#GreetServiceImpl#0" />
+            <element signature="method#greetEveryOne#0;class#GreetServiceImpl#0" />
+            <element signature="e#3499#3500#0" expanded="true" />
+            <element signature="e#3561#3562#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/thoainguyen/grpc/greeting/client/GreetingClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="43" column="58" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#doBiDiStreamingCall#0;class#GreetingClient#0" />
+            <element signature="e#1598#1599#0" expanded="true" />
+            <element signature="e#1663#1664#0" expanded="true" />
+            <element signature="method#doClientStreamingCall#0;class#GreetingClient#0" />
+            <element signature="method#doServerStreamingCall#0;class#GreetingClient#0" />
+            <element signature="method#doUnaryCall#0;class#GreetingClient#0" />
           </folding>
         </state>
       </provider>
