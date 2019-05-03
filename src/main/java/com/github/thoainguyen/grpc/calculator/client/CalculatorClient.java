@@ -56,20 +56,15 @@ public class CalculatorClient {
             }
         });
 
-        requestObserver.onNext(ComputeAverageRequest.newBuilder()
-                .setNumber(1).build());
+        // we send 1000 request to our server (client streaming)
+        for(int i = 0; i < 1000; i ++){
+            requestObserver.onNext(ComputeAverageRequest.newBuilder()
+                    .setNumber(i)
+                    .build());
+        }
 
-        requestObserver.onNext(ComputeAverageRequest.newBuilder()
-                .setNumber(2).build());
-
-        requestObserver.onNext(ComputeAverageRequest.newBuilder()
-                .setNumber(3).build());
-
-        requestObserver.onNext(ComputeAverageRequest.newBuilder()
-                .setNumber(4).build());
-
-        // we expect the average to be 10/4 = 2.5
         requestObserver.onCompleted();
+
         try {
             latch.await(3, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
