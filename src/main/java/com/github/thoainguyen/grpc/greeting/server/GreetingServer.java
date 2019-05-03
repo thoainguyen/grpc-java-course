@@ -3,6 +3,7 @@ package com.github.thoainguyen.grpc.greeting.server;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
+import java.io.File;
 import java.io.IOException;
 
 public class GreetingServer {
@@ -10,11 +11,22 @@ public class GreetingServer {
     public static void main(String[] args) throws IOException, InterruptedException {
         System.out.println("Hello gRPC");
 
+        // plaintext server ; use for developement
+        // Server server = ServerBuilder.forPort(50051)
+        //        .addService(new GreetServiceImpl())
+        //        .build();
+
+
+        // secure server ; use for production
         Server server = ServerBuilder.forPort(50051)
                 .addService(new GreetServiceImpl())
-                .build();
+                .useTransportSecurity(
+                        new File("ssl/server.crt"),
+                        new File("ssl/server.pem")
+                ).build();
 
         server.start();
+
 
         Runtime.getRuntime().addShutdownHook(new Thread( () -> {
             System.out.println("Received Shutdown Request");
