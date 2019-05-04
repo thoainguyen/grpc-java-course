@@ -9,7 +9,6 @@ import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 import org.bson.Document;
 import org.bson.types.ObjectId;
-import sun.java2d.loops.Blit;
 
 import static com.mongodb.client.model.Filters.eq;
 
@@ -135,6 +134,17 @@ public class BlogServerImpl extends BlogServiceGrpc.BlogServiceImplBase {
     }
 
     @Override
+    public void listBlog(ListBlogRequest request, StreamObserver<ListBlogResponse> responseObserver) {
+        System.out.println("Reacceveid List Blog request ");
+
+        collection.find().iterator().forEachRemaining( document ->
+                responseObserver.onNext(
+                        ListBlogResponse.newBuilder().setBlog(documentToBlog(document)).build()
+            ));
+        responseObserver.onCompleted();
+    }
+
+    @Override
     public void deleteBlog(DeleteBlogRequest request, StreamObserver<DeleteBlogResponse> responseObserver) {
         System.out.println("Delete Blog ");
 
@@ -171,7 +181,11 @@ public class BlogServerImpl extends BlogServiceGrpc.BlogServiceImplBase {
             responseObserver.onCompleted();
 
         }
+
+
     }
+
+
 
     private Blog documentToBlog(Document document){
         return Blog.newBuilder()

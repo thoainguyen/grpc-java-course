@@ -65,11 +65,18 @@ public class BlogClient {
         System.out.println(updateResponse);
 
 
-        System.out.println("Delete Blog ...");
-        DeleteBlogResponse deleteBlogResponse = blogClient.deleteBlog(
-                DeleteBlogRequest.newBuilder().setBlogId(blogId).build()
+//        System.out.println("Delete Blog ...");
+//        DeleteBlogResponse deleteBlogResponse = blogClient.deleteBlog(
+//                DeleteBlogRequest.newBuilder().setBlogId(blogId).build()
+//        );
+//        System.out.println(deleteBlogResponse);
+
+
+        blogClient.listBlog(ListBlogRequest.newBuilder().build()).forEachRemaining(
+                listBlogResponse -> System.out.println(listBlogResponse.getBlog())
         );
-        System.out.println(deleteBlogResponse);
+
+
         channel.shutdown();
 
     }
