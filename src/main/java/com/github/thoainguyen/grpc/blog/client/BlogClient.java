@@ -32,19 +32,38 @@ public class BlogClient {
 
         System.out.println(createResponse);
 
-        String blogId = createResponse.getBlog().getId();
-        System.out.println("Reading blog....");
+        System.out.println("Reading blog...");
 
-        ReadBlogResponse readBlogResponse = blogClient.readBlog(ReadBlogRequest.newBuilder()
-        .setBlogId(blogId)
-        .build());
+        String blogId = createResponse.getBlog().getId();
+
+
+        ReadBlogResponse readBlogResponse = blogClient.readBlog(ReadBlogRequest
+                .newBuilder()
+                .setBlogId(blogId)
+                .build());
 
         System.out.println(readBlogResponse);
 
-        System.out.println("Reading blog with non exisiting id...");
-        ReadBlogResponse readBlogResponseNotFound = blogClient.readBlog(ReadBlogRequest.newBuilder()
-                .setBlogId("fake").build());
-        System.out.println(readBlogResponseNotFound);
+//        System.out.println("Reading blog with non exisiting id...");
+//
+//        ReadBlogResponse readBlogResponseNotFound = blogClient.readBlog(ReadBlogRequest.newBuilder()
+//                .setBlogId("fake").build());
+//
+//        System.out.println(readBlogResponseNotFound);
+
+        Blog newBlog  = Blog.newBuilder()
+                .setId(blogId)
+                .setAuthorId("Changed Author")
+                .setTitle("New Blog (updated)")
+                .setContent("Hello world this is my firest blog!")
+                .build();
+
+        UpdateBlogResponse updateResponse = blogClient.updateBlog(UpdateBlogRequest.newBuilder()
+                .setBlog(newBlog).build());
+
+        System.out.println("Update Blog...");
+        System.out.println(updateResponse);
+
         channel.shutdown();
 
     }

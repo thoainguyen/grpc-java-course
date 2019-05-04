@@ -18,19 +18,27 @@ message CreateBlogRequest {
 };
 
 message CreateBlogResponse {
-    Blog blog = 1;
+    Blog blog = 1; // the id shouldnt matter
 };
 
 message ReadBlogRequest {
-   string blog_id = 1;
+   string blog_id = 1; // the id will correspond to the one in MongoDB
 };
 
 message ReadBlogResponse {
     Blog blog = 1;
 };
 
+message UpdateBlogRequest{
+    Blog blog = 1;
+};
+
+message UpdateBlogResponse {
+    Blog blog = 1;
+}
+
 service BlogService {
     rpc CreateBlog(CreateBlogRequest) returns (CreateBlogResponse) {};
-    rpc ReadBlog(ReadBlogRequest) returns (ReadBlogResponse){};
-    // NOT_FOUND if not found
+    rpc ReadBlog(ReadBlogRequest) returns (ReadBlogResponse){}; // return NOT_FOUND if not found
+    rpc UpdateBlog(UpdateBlogRequest) returns (UpdateBlogResponse) {};
 };

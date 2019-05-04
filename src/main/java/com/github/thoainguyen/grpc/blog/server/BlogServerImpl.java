@@ -8,6 +8,7 @@ import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
 import org.bson.Document;
 import org.bson.types.ObjectId;
+import sun.java2d.loops.Blit;
 
 import static com.mongodb.client.model.Filters.eq;
 
@@ -42,20 +43,29 @@ public class BlogServerImpl extends BlogServiceGrpc.BlogServiceImplBase {
 
     @Override
     public void readBlog(ReadBlogRequest request, StreamObserver<ReadBlogResponse> responseObserver) {
+        System.out.println("Received Update Blog Request");
 
         String blogId = request.getBlogId();
 
-        System.out.println("Search for a blog");
+        System.out.println("Searching for a blog");
 
-        Document result = collection.find(eq("_id", new ObjectId(blogId)))
-            .first();
+        Document result = null;
+
+        try {
+            result = collection.find(eq("_id", new ObjectId(blogId)))
+                    .first();
+        } catch (Exception e){
+            responseObserver.onError(Status.NOT_FOUND
+                    .withDescription("The blog with the corresponding id was not found")
+                    .augmentDescription(e.getLocalizedMessage())
+                    .asRuntimeException()
+            );
+        }
 
         if (result == null){
             System.out.println("Blog not found");
 
-            // we don't have a match
-            responseObserver.onError(
-                    Status.NOT_FOUND
+            responseObserver.onError(Status.NOT_FOUND
                     .withDescription("The blog with the corresponding id was not found")
                     .asRuntimeException()
             );
@@ -63,11 +73,7 @@ public class BlogServerImpl extends BlogServiceGrpc.BlogServiceImplBase {
         else {
             System.out.println("Blog is found");
 
-            Blog blog = Blog.newBuilder().setAuthorId(result.getString("author_id"))
-                    .setTitle(result.getString("title"))
-                    .setContent(result.getString("content"))
-                    .setId(blogId)
-                    .build();
+            Blog blog = documentToBlog(result);
             responseObserver.onNext(ReadBlogResponse.newBuilder()
                     .setBlog(blog).build());
             responseObserver.onCompleted();
@@ -76,4 +82,63 @@ public class BlogServerImpl extends BlogServiceGrpc.BlogServiceImplBase {
 
     }
 
+    @Override
+    public void updateBlog(UpdateBlogRequest request, StreamObserver<UpdateBlogResponse> responseObserver) {
+        Blog blog = request.getBlog();
+        String blogId = blog.getId();
+
+
+        System.out.println("Search for a blog");
+
+        Document result = null;
+
+        try {
+            result = collection.find(eq("_id", new ObjectId(blogId))).first();
+        } catch (Exception e){
+            // we don't have a match
+            responseObserver.onError(
+                    Status.NOT_FOUND
+                            .withDescription("The blog with the corresponding id was not found")
+                            .augmentDescription(e.getLocalizedMessage())
+                            .asRuntimeException()
+            );
+        }
+
+        if (result == null){
+            System.out.println("Blog not found");
+
+            responseObserver.onError(Status.NOT_FOUND
+                    .withDescription("The blog with the corresponding id was not found")
+                    .asRuntimeException()
+            );
+        }
+        else {
+
+            Document replacement = new Document("author_id", blog.getAuthorId())
+                    .append("title", blog.getTitle())
+                    .append("content", blog.getContent())
+                    .append("_id", new ObjectId(blogId));
+
+            System.out.println("Replace Blog in Database");
+
+            collection.replaceOne(eq("_id", result.getObjectId("_id")), replacement);
+
+            System.out.println("Replaced! Sending as a response");
+
+            responseObserver.onNext(
+                    UpdateBlogResponse.newBuilder()
+                            .setBlog(documentToBlog(replacement)).build()
+            );
+            responseObserver.onCompleted();
+        }
+    }
+
+    private Blog documentToBlog(Document document){
+        return Blog.newBuilder()
+                .setAuthorId(document.getString("author_id"))
+                .setTitle(document.getString("title"))
+                .setContent(document.getString("content"))
+                .setId(document.getObjectId("_id").toString())
+                .build();
+    }
 }
