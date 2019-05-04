@@ -64,6 +64,12 @@ public class BlogClient {
         System.out.println("Update Blog...");
         System.out.println(updateResponse);
 
+
+        System.out.println("Delete Blog ...");
+        DeleteBlogResponse deleteBlogResponse = blogClient.deleteBlog(
+                DeleteBlogRequest.newBuilder().setBlogId(blogId).build()
+        );
+        System.out.println(deleteBlogResponse);
         channel.shutdown();
 
     }

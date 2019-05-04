@@ -3,6 +3,7 @@ package com.github.thoainguyen.grpc.blog.server;
 
 import com.mongodb.client.*;
 
+import com.mongodb.client.result.DeleteResult;
 import com.proto.blog.*;
 import io.grpc.Status;
 import io.grpc.stub.StreamObserver;
@@ -130,6 +131,45 @@ public class BlogServerImpl extends BlogServiceGrpc.BlogServiceImplBase {
                             .setBlog(documentToBlog(replacement)).build()
             );
             responseObserver.onCompleted();
+        }
+    }
+
+    @Override
+    public void deleteBlog(DeleteBlogRequest request, StreamObserver<DeleteBlogResponse> responseObserver) {
+        System.out.println("Delete Blog ");
+
+        String blogId = request.getBlogId();
+        DeleteResult result =  null;
+
+        try {
+            result = collection.deleteOne(eq("_id", new ObjectId(blogId)));
+
+        } catch (Exception e){
+            // we don't have a match
+            responseObserver.onError(
+                    Status.NOT_FOUND
+                            .withDescription("The blog with the corresponding id was not found")
+                            .augmentDescription(e.getLocalizedMessage())
+                            .asRuntimeException()
+            );
+        }
+
+        if (result == null){
+            System.out.println("Blog not found");
+
+            responseObserver.onError(Status.NOT_FOUND
+                    .withDescription("The blog with the corresponding id was not found")
+                    .asRuntimeException()
+            );
+        }
+        else {
+
+            System.out.println("Blog was deleted");
+            responseObserver.onNext(DeleteBlogResponse.newBuilder()
+                    .setBlogId(blogId).build());
+
+            responseObserver.onCompleted();
+
         }
     }
 
